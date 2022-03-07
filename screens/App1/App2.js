@@ -1,10 +1,10 @@
-import {StyleSheet, View} from 'react-native'
+import {StyleSheet, SafeAreaView} from 'react-native'
 import React, {useState} from 'react'
 
-import Header from './components/Header'
-import StartGameScreen from './screens/StartGameScreen'
-import GameScreen from './screens/GameScreen'
-import GameOverScreen from './screens/GameOverScreen'
+import Header from '../../components/Header'
+import StartGameScreen from '../StartGameScreen'
+import GameScreen from '../GameScreen'
+import GameOverScreen from '../GameOverScreen'
 
 const App2 = () => {
   const [userNumber, setUserNumber] = useState()
@@ -39,10 +39,10 @@ const App2 = () => {
   }
 
   return (
-    <View style={styles.screen}>
+    <SafeAreaView style={styles.screen}>
       <Header title="Guess a Number" />
       {content}
-    </View>
+    </SafeAreaView>
   )
 }
 
